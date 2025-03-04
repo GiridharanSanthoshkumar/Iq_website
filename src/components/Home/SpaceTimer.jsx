@@ -63,7 +63,7 @@ const SpaceTimer = () => {
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.4 }}
           >
             <span className="time">{timeLeft.minutes}</span>
-            <span className="label">Minutes</span>
+            <span className="label">Mins</span>
           </motion.div>
 
           <motion.div 
@@ -72,7 +72,7 @@ const SpaceTimer = () => {
             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.6 }}
           >
             <span className="time">{timeLeft.seconds}</span>
-            <span className="label">Seconds</span>
+            <span className="label">Secs</span>
           </motion.div>
         </div>
       </motion.div>

@@ -1,7 +1,7 @@
 /* Background */
 .about-container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
    /* background: linear-gradient(135deg, #000000, #063748f5, #08090b, #000000);
    */
   
@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
-    overflow: hidden;
+    
 }
 
 .about-container::before {
@@ -236,13 +236,15 @@
         position: absolute;
         right: -25%;
         bottom: 12%;
+         box-shadow: 0 0 30px 10px rgba(6, 69, 111, 0.7), 
+                0 0 40px 10px rgba(9, 85, 135, 0.5);
         
     }
 
     #astroImage {
         width: 170px;
         margin-right: 5%;
-        margin-top:35%;
+      
     }
 
 
@@ -253,6 +255,7 @@
         z-index: 2;
         position:absolute;
         top:0px; 
+        
         /*display:none;*/
       }
 
@@ -260,11 +263,16 @@
       .title {
         font-size: 1.8rem;
         font-weight: bold;
+        padding-left: 1%;
       }
       
       .subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 1rem;
+        word-spacing: 0.5ch;
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        
       }
       
       .highlight {

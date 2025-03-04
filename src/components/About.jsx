@@ -55,20 +55,7 @@ const About = () => {
             </div>
 
             {/* UFO Animation */}
-            <motion.img
-                src={UFOImage}
-                alt="UFO"
-                className="ufo"
-                animate={{
-                    x: isMobile ? [0,200,35,450,20,45]:[0, 1200,300,1400,200,1300], // Moves to random places
-                    y: isMobile? [0,120,150,300,400,60] :[0, 800,400,200,900,100],
-                }}
-                transition={{
-                    duration: isMobile ? 7 : 10,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                }}
-            />
+           
 
             <div className="about-content">
                 <h1 className="title">
@@ -76,7 +63,7 @@ const About = () => {
                     
                 </h1>
                 <p className="subtitle">
-                  InfoQuest (IQ), is a prestigious national-level intercollegiate technical symposium organized by the Department of Computer Science and Engineering (CSE). This flagship event serves as a platform for students to demonstrate their technical expertise, problem-solving abilities, and creativity through a series of challenging competitions, fostering innovation and excellence in computer science.
+                  InfoQuest (IQ), is a prestigious national-level intercollegiate technical symposium organized by the CSEA at GCT. This flagship event serves as a platform for students to demonstrate their technical expertise, problem-solving abilities, and creativity through a series of challenging competitions, fostering innovation and excellence in computer science.
                 </p>
                 <button className="register-button">REGISTER</button>
             </div>

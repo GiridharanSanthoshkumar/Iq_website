@@ -2,26 +2,26 @@
 .nontechContainer {
   display: flex;
   width: 100%;
-  height: 100vh;
+height: inherit;
   align-items: center;
 position: relative;
-overflow: hidden;
+
 }
 
 /* Left Side - Moon & Astronaut */
 .left-side {
 width: 50%; 
 height: 100%;
-position: relative;
+
 
 }
 
 .moon {
-  width: 750px;
+
  
   opacity: 0.8;
-  position:absolute;
-  left:-50%;
+  margin-left: -20%;
+  
 
 }
 
@@ -48,6 +48,7 @@ flex-direction: column;
 }
 .right-title{
     color: white;
+    font-family: 'bigmacca';
 
 }
 .event-boxes{
@@ -145,6 +146,9 @@ flex-direction: column;
 }
 .date{
     display: none;
+}
+.right-title{
+  text-align: center;
 }
 
 .nontechbtn {

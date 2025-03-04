@@ -45,7 +45,7 @@ body {
 */
 .homepage {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: url("../assets/background.png") no-repeat center/cover;
   color: white;
   text-align: center;
