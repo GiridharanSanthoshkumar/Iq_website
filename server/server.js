@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import { google } from "googleapis";
 import { readFile } from "fs/promises";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // Initialize Express app
 const app = express();
@@ -12,12 +15,12 @@ app.use(cors()); // Allows frontend to communicate with backend
 app.use(express.json()); // Parses JSON body requests
 
 // Load Google API credentials
-const keys = JSON.parse(await readFile("./payment-gateway-451214-8dbcd6ff8903.json", "utf8"));
+//const keys = JSON.parse(await readFile("./payment-gateway-451214-8dbcd6ff8903.json", "utf8"));
 
 const client = new google.auth.JWT(
-  keys.client_email,
+  process.env.CLIENT_EMAIL,
   null,
-  keys.private_key,
+  process.env.PRIVATE_KEY,
   ["https://www.googleapis.com/auth/spreadsheets"]
 );
 

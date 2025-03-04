@@ -21,3 +21,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.payment-gateway-451214-8dbcd6ff8903.json
