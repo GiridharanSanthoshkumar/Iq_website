@@ -1,0 +1,51 @@
+.register-container {
+    width: 100%;
+    min-height: 100vh; /* Allows full-page scrolling */
+    background: linear-gradient(135deg, #063748f5, #000000f5, #000000, #063748f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content from top */
+    position: relative;
+    overflow-y: auto; /* Allows scrolling */
+    padding-top: 5%; /* Gives space at the top */
+}
+
+
+
+
+
+
+
+
+/* 🚀 Rocket Animation */
+.rocket {
+    position: absolute;
+    width:600px;
+    font-size: 3rem;
+    bottom:0px;
+    left: 0px;
+    z-index: 1; /* Lower than form */
+}
+
+/* 🔥 Fire & Smoke Effect */
+.fire {
+    position: absolute;
+    width: 15px;
+    height: 50px;
+    background: linear-gradient(to top, orange, red, transparent);
+    bottom: -20px;
+    left: 10px;
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: fire-flicker 0.2s infinite alternate;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 728px) 
+{
+    .rocket{
+        width:300px;
+    }
+}

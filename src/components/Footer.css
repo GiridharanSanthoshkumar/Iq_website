@@ -1,0 +1,53 @@
+/* Footer Styling */
+.footer {
+ 
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  color: #00bcd4;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.label {
+  color: #ccc;
+  font-weight: bold;
+}
+
+.contact {
+  color: #00bcd4;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .footer-title {
+    font-size: 1.3rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}

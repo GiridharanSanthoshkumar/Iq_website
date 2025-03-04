@@ -1,0 +1,164 @@
+/* Main Container */
+.nontechContainer {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+position: relative;
+overflow: hidden;
+}
+
+/* Left Side - Moon & Astronaut */
+.left-side {
+width: 50%; 
+height: 100%;
+position: relative;
+
+}
+
+.moon {
+  width: 750px;
+ 
+  opacity: 0.8;
+  position:absolute;
+  left:-50%;
+
+}
+
+.astro1{
+position: absolute;
+top:30%;
+  width: 200px;
+ 
+ 
+}
+
+/* Right Side - Event Boxes */
+.right-side {
+ width:100%;
+ 
+display: flex;
+flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-left:2.5%;
+  padding-right:2.5% ;
+ 
+ 
+}
+.right-title{
+    color: white;
+
+}
+.event-boxes{
+    display: flex;
+     gap: 1%;
+     height: 100%;
+
+}
+.first_col{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    gap:3%;
+    align-items: center;
+}
+.second_col{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+    gap:3%;
+     align-items: center;
+}
+
+
+
+
+.event-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transition: 0.3s;
+  width:80%;
+}
+
+.event-box:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.date {
+  font-size: 14px;
+  color: #00f6ff;
+}
+
+.nontechbtn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background: #00f6ff;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+   font-family: 'Orbitron', sans-serif;
+}
+
+.nontechbtn:hover {
+  background: #008c99;
+  color: white;
+  
+ 
+
+
+
+}
+.evnt-desc{
+    height: 20%;
+    overflow: hidden;
+    color:#00f6ff;
+}
+
+@media (min-width: 768px) {
+  .event-box{
+     height:200px;
+}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+.nontechContainer {
+               height: 90vh;
+        padding-bottom: 2%;
+        overflow: hidden;
+}
+.left-side{
+        display: none;
+    }
+    .event-box {
+ 
+  padding: 5px;
+ 
+}
+.date{
+    display: none;
+}
+
+.nontechbtn {
+ 
+margin: 0px;
+ font-family: 'Orbitron', sans-serif;
+}
+.event-box{
+     background: rgba(255, 255, 255, 0.264);
+}
+.evnt-desc{
+    height: 80px;
+    overflow: hidden;
+    color:#00f6ff;
+}
+
+}
