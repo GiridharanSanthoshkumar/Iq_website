@@ -7,13 +7,13 @@ import myVideo from "./assets/UFO_animate.mp4"; // Adjust the path
 
 
 const EventPage = ({ event }) => {
-  return (
+  return ( 
     <div className="event_container">
           <div className="nebula"></div>
           <div className="UFOvideo">
       <video width="800" height="450" autoPlay loop muted style={{width:"100vw"}}>
         <source src={myVideo} type="video/mp4" />
-        Your browser does not support the video tag.
+        
       </video>
     </div>
           

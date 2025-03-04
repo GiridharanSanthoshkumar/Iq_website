@@ -64,7 +64,7 @@ const Nontech = () => {
            
         {events1.map((event, index) => (
         <div key={index} className="event-box">
-        <h3>{event.title}</h3>
+        <h3 style={{color:"white"}}>{event.title}</h3>
         <p className="date">{event.date}</p>
         <p className="evnt-desc">{event.description}</p>
             <button className="nontechbtn" onClick={() => { navigate("/" + event.title) }}>Read More</button>
@@ -75,7 +75,7 @@ const Nontech = () => {
              <div className="second_col">
                {events2.map((event, index) => (
             <div key={index} className="event-box">
-              <h3>{event.title}</h3>
+              <h3 style={{color:"white"}}>{event.title}</h3>
               <p className="date">{event.date}</p>
               <p className="evnt-desc">{event.description}</p>
                    <button className="nontechbtn" onClick={() => { navigate("/" + event.title) }}>Read More</button>

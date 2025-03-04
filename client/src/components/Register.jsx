@@ -41,7 +41,13 @@ const Register = () => {
 
             const result = await response.json();
             if (result.status === "success") {
-                setMessage(`Registration successful! Your ID: ${result.id}`);
+                setMessage(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation your registration.`);
+                window.alert(message);
+                formData.name = "";
+                formData.email = "";
+                formData.phone = "";
+                formData.college = "";
+                formData.event = "";
             } else {
                 setMessage(`Error: ${result.message}`);
             }

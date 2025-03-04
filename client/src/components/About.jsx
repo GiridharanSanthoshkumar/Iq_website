@@ -6,7 +6,9 @@ import "./About.css";
 import saturn_image from "./assets/saturn_image.png";
 import earth from "./assets/earth.png";
 import neptune from "./assets/neptune.png";
+import { useNavigate } from "react-router-dom";
 const About = () => {
+    const navigate = useNavigate();
     const numStars = 150; // Number of stars
     const stars = Array.from({ length: numStars });
     const screenWidth = window.innerWidth;
@@ -63,9 +65,9 @@ const About = () => {
                     
                 </h1>
                 <p className="subtitle">
-                  InfoQuest (IQ), is a prestigious national-level intercollegiate technical symposium organized by the CSEA at GCT. This flagship event serves as a platform for students to demonstrate their technical expertise, problem-solving abilities, and creativity through a series of challenging competitions, fostering innovation and excellence in computer science.
+                 InfoQuest (IQ) is a national-level technical symposium by the CSE Department, challenging sharp minds to tackle complex problems, push their limits, and showcase their expertise through exciting events.
                 </p>
-                <button className="register-button">REGISTER</button>
+                <button className="register-button" onClick={()=>navigate("/register")}>REGISTER</button>
             </div>
 
             {/* Portal with Astronaut */}
