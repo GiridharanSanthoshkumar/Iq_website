@@ -15,12 +15,12 @@ app.use(cors()); // Allows frontend to communicate with backend
 app.use(express.json()); // Parses JSON body requests
 
 // Load Google API credentials
-//const keys = JSON.parse(await readFile("./payment-gateway-451214-8dbcd6ff8903.json", "utf8"));
+const keys = JSON.parse(await readFile("./payment-gateway-451214-8dbcd6ff8903.json", "utf8"));
 
 const client = new google.auth.JWT(
-  process.env.CLIENT_EMAIL,
+  keys.client_email,
   null,
-  process.env.PRIVATE_KEY,
+  keys.private_key, 
   ["https://www.googleapis.com/auth/spreadsheets"]
 );
 
