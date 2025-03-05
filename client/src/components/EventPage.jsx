@@ -37,10 +37,11 @@ const EventPage = ({ event }) => {
             
           </ul>
         </div>
-        <div className="venue-info">
+        {/*<div className="venue-info">
           <h2>Venue & Timing</h2>
           <p>Planetarium X, 7:00 PM - 11:00 PM</p>
         </div>
+        */}
         <div className="contact-info">
           <h2>Contact</h2>
           {event.contact.map((c) => <p style={{ display: "block" }} >{c}</p>)}
