@@ -9,8 +9,11 @@
     position: relative;
     overflow-y: auto; /* Allows scrolling */
     padding-top: 5%; /* Gives space at the top */
+      font-family: 'Orbitron', sans-serif;
 }
-
+.input-field{
+   font-family: 'Orbitron', sans-serif;
+}
 
 
 
@@ -40,7 +43,41 @@
     filter: blur(5px);
     animation: fire-flicker 0.2s infinite alternate;
 }
+.check-box-flexbox{
+    display: flex;
+   width: 92%;
+    margin-left: 3%;
+   
+   column-gap: 12%;
+    
+    
+}
 
+
+.check-boxx1{
+    color:white;
+        width: 39%;
+        border-radius:20px ;
+    
+    
+}
+.check-boxx2{
+     color:white;
+      height: 100%;
+        width: 40%;
+          border-radius:20px ;
+     
+      
+
+}
+ .check-boxx1>label{
+display: block;
+
+    }
+    .check-boxx2>label{
+display: block;
+
+    }
 
 /* Responsive */
 @media screen and (max-width: 728px) 
@@ -48,4 +85,30 @@
     .rocket{
         width:300px;
     }
+    .check-boxx1>label{
+display: block;
+
+    }
+
+.check-box-flexbox{
+    display: flex;
+    flex-direction: column;
+   width: 100%;
+    margin-left: 3%;
+
+   
+   
+    
+    
+}
+.check-boxx1{
+    width: 80%;
+    margin-left:5%;
+}
+.check-boxx2{
+    margin-top: 10%;
+    width: 80%;
+    margin-left:5%;
+}
+   
 }

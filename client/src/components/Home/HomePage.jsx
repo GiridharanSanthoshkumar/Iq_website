@@ -47,7 +47,7 @@ const HomePage = () => {
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-          onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>contact</motion.li>
+          onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>Contact</motion.li>
           </ul>
       
         </motion.nav>

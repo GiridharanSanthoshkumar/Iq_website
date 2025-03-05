@@ -23,16 +23,37 @@ const Register = () => {
         email: "",
         phone: "",
         college: "",
-        event: ""
+        events:[]
     });
     const [message, setMessage] = useState("");
-
+    const eventsList1 = [ "Reverse Coding",
+  "Debugging",
+  "Blind Coding",
+  "Paper Presentation",
+  "Web Design",
+        "Technical Quiz",
+    ];
+     const eventsList2 = ["Treasure Hunt","Type Racer","Music Mania","Tech Charades"];
     const handleChange = (e) => {
-        formData.current[e.target.name] = e.target.value;
+        formData.current[e.target.name] += e.target.value;
+
+    };
+    const handleCheckboxChange = (e) => {
+        const { value, checked } = e.target;
+        
+        if (checked) {
+            // Add event to array if checked
+            formData.current.events.push(value);
+        } else {
+            // Remove event from array if unchecked
+            formData.current.events = formData.current.events.filter(event => event !== value);
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+      
+      
         try {
             const response = await fetch(backend+"/register", {
                 method: "POST",
@@ -48,7 +69,7 @@ const Register = () => {
                 formData.email = "";
                 formData.phone = "";
                 formData.college = "";
-                formData.event = "";
+                formData.event =[];
             } else {
                 setMessage(`Error: ${result.message}`);
             }
@@ -97,7 +118,7 @@ const Register = () => {
                     repeat: Infinity,
                     ease: "linear",
                 }}
-                style={{ position: "absolute" }}
+                style={{ position: "absolute",display:"none" }}
             >
                 <div className="fire"></div> 🚀
             </motion.div>
@@ -105,7 +126,7 @@ const Register = () => {
             {/* Register Form */}
             <Stack direction="column" sx={{ width:isMobile ? "80%" : "75%", margin: "0 auto", bgcolor: "transparent", zIndex: 10 }}>
                 <Paper elevation={5} sx={{ padding: 4, bgcolor: "transparent", borderRadius: 10, boxShadow: "0 0 18px cyan", border: "3px solid white" }}>
-                    <Typography className="registerTitle" variant={isMobile ? "h5" : "h4"} sx={{ textAlign: "center", color: "white", textShadow: "0 0 5px cyan", marginBottom: 3 ,fontFamily:"Times New Roman"}}>
+                    <Typography className="registerTitle input-field" variant={isMobile ? "h5" : "h4"} sx={{ textAlign: "center", color: "white", textShadow: "0 0 5px cyan", marginBottom: 3 , fontFamily: "Orbitron" }}>
                         Mission to IQ 🚀
                     </Typography>
 
@@ -113,8 +134,10 @@ const Register = () => {
                     <Grid container spacing={2} columnGap={10} rowGap={isMobile ? 2 : 8} style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: "2%" }}>
                         <Grid item xs={12} sm={5}>
                             <TextField 
-                                fullWidth 
-                                label="Name" 
+                                fullWidth
+                              className="input-field"
+                                label="Name"
+                                
                                 name="name" 
                                 variant="outlined" 
                                 value={formData.name} 
@@ -122,8 +145,8 @@ const Register = () => {
                                 InputProps={{ style: { color: "white" } }}
                                 sx={{ 
                                     zIndex: 10, 
-                                    input: { color: "white" }, 
-                                    label: { color: "white" }, 
+                                    input: { color: "white" ,fontFamily: "Orbitron"}, 
+                                    label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
                                         "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
@@ -135,16 +158,17 @@ const Register = () => {
                         <Grid item xs={12} sm={5}>
                             <TextField 
                                 fullWidth 
+                              className="input-field"
                                 label="Email" 
                                 name="email" 
                                 variant="outlined" 
                                 value={formData.email} 
                                 onChange={handleChange} 
-                                InputProps={{ style: { color: "white" } }}
+                                InputProps={{ style: { color: "white",fontFamily: "Orbitron" } }}
                                 sx={{ 
                                     zIndex: 10, 
-                                    input: { color: "white" }, 
-                                    label: { color: "white" }, 
+                                    input: { color: "white" ,fontFamily: "Orbitron"}, 
+                                    label: { color: "white",fontFamily: "Orbitron" }, 
                                     "& .MuiOutlinedInput-root": { 
                                         "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
@@ -156,6 +180,7 @@ const Register = () => {
                         <Grid item xs={12} sm={5}>
                             <TextField 
                                 fullWidth 
+                                className="input-field"
                                 label="Phone" 
                                 name="phone" 
                                 variant="outlined" 
@@ -164,8 +189,8 @@ const Register = () => {
                                 InputProps={{ style: { color: "white" } }}
                                 sx={{ 
                                     zIndex: 10, 
-                                    input: { color: "white" }, 
-                                    label: { color: "white" }, 
+                                   input: { color: "white" ,fontFamily: "Orbitron"}, 
+                                    label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
                                         "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
@@ -177,6 +202,7 @@ const Register = () => {
                         <Grid item xs={12} sm={5}>
                             <TextField 
                                 fullWidth 
+                                className="input-field"
                                 label="College" 
                                 name="college" 
                                 variant="outlined" 
@@ -185,8 +211,8 @@ const Register = () => {
                                 InputProps={{ style: { color: "white" } }}
                                 sx={{ 
                                     zIndex: 10, 
-                                    input: { color: "white" }, 
-                                    label: { color: "white" }, 
+                                   input: { color: "white" ,fontFamily: "Orbitron"}, 
+                                    label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
                                         "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
@@ -196,7 +222,7 @@ const Register = () => {
                             />
                         </Grid>
 
-                        {/* Event Selection Dropdown */}
+                        {/* Event Selection Dropdown
                         <Grid item xs={12} sm={5}>
                             <Select
                                 fullWidth
@@ -226,10 +252,41 @@ const Register = () => {
                                 <MenuItem value="Blockchain Seminar">Blockchain Seminar</MenuItem>
                             </Select>
                         </Grid>
+                         */}
+                        <div class="check-box-flexbox">
+                       <fieldset class="check-boxx1">
+                <legend>Select Tech Events</legend>
+                {eventsList1.map((event, index) => (
+                    <label key={index}>
+                        <input
+                            type="checkbox"
+                            value={event}
+                            onChange={handleCheckboxChange}
+                        />
+                        {event}
+                    </label>
+                ))}
+                        </fieldset>
+                        
+                         <fieldset class="check-boxx2">
+                <legend>Select Non-Tech Events</legend>
+                {eventsList2.map((event, index) => (
+                    <label key={index}>
+                        <input
+                            type="checkbox"
+                            value={event}
+                            onChange={handleCheckboxChange}
+                        />
+                        {event}
+                    </label>
+                ))}
+                            </fieldset>
+                            </div>
 
                         <Grid item xs={12} sm={5}>
                             <TextField 
                                 fullWidth 
+                                className="input-field"
                                 label="College" 
                                 name="college" 
                                 variant="outlined" 
@@ -238,8 +295,8 @@ const Register = () => {
                                 InputProps={{ style: { color: "white" } }}
                                 sx={{ 
                                     zIndex: 10, 
-                                    input: { color: "white" }, 
-                                    label: { color: "white" }, 
+                                   input: { color: "white" ,fontFamily: "Orbitron"}, 
+                                    label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
                                         "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
@@ -257,6 +314,7 @@ const Register = () => {
                         <Button 
                             variant="contained" 
                             sx={{
+                                fontFamily:"Orbitron",
                                 background: "transparent",
                                 border: "2px solid white",
                                 color: "white",
