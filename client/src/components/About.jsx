@@ -15,7 +15,7 @@ const About = () => {
     const isMobile = screenWidth < 768;
 
     return (
-        <div className="about-container">
+        <div className="about-container" id="about">
             {/* Planets */}
             <div className="planets">
                 

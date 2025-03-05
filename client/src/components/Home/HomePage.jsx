@@ -6,15 +6,16 @@ import astronaut from "../assets/astronaut.png";
 //import earth from "./background.png";
 import SpaceTimer from "./SpaceTimer"; 
 import FloatingStars from "./FloatingStars";
+import { useNavigate } from "react-router-dom";
 //import Navbar from "./Navbar";
 
 
 const HomePage = () => {
 
-
+  const navigate = useNavigate();
 
   return (
-    <div className="homepage" style={{}}>
+    <div className="homepage" id="home">
       <FloatingStars></FloatingStars>
       {//<SatelliteAnimation></SatelliteAnimation>
       }
@@ -29,19 +30,24 @@ const HomePage = () => {
             <motion.li
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}>Home</motion.li>
+            transition={{ delay: 0.2 }}
+            onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })}
+          >Home</motion.li>
             <motion.li
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}>Events</motion.li>
+            transition={{ delay: 0.2 }}
+          onClick={() => document.getElementById("events")?.scrollIntoView({ behavior: "smooth" })}>Events</motion.li>
             <motion.li
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}>Proshow</motion.li>
+            transition={{ delay: 0.2 }}
+          onClick={()=>navigate("/register")}>Register</motion.li>
             <motion.li
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}>contact</motion.li>
+            transition={{ delay: 0.2 }}
+          onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>contact</motion.li>
           </ul>
       
         </motion.nav>

@@ -46,7 +46,7 @@ const stars = generateStars(100);
 const EventDisplay = () => {
   const navigate = useNavigate();
   return (
-    <div className="eventpage">
+    <div className="eventpage" id="events">
       <h1 className="title evnt-title">EVENTS</h1>
       <StarryBackground></StarryBackground>
     <motion.div className="event-container">
