@@ -15,6 +15,7 @@ const Register = () => {
 
     const screenWidth = window.innerWidth;
     const isMobile = screenWidth < 768;
+    const backend = "http://localhost:5000";
 
     // State for form fields
    const formData = useRef({
@@ -33,7 +34,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:5000/register", {
+            const response = await fetch(backend+"/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData.current),

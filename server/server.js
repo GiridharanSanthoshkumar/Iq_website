@@ -2,9 +2,6 @@ import express from "express";
 import cors from "cors";
 import { google } from "googleapis";
 import { readFile } from "fs/promises";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 // Initialize Express app
 const app = express();
@@ -16,11 +13,11 @@ app.use(express.json()); // Parses JSON body requests
 
 // Load Google API credentials
 const keys = JSON.parse(await readFile("./payment-gateway-451214-8dbcd6ff8903.json", "utf8"));
-
+console.log(keys.client_email);
 const client = new google.auth.JWT(
-  process.env.CLIENT_EMAIL,
+  keys.client_email,
   null,
-process.env.PRIVATE_KEY,
+  keys.private_key,
   ["https://www.googleapis.com/auth/spreadsheets"]
 );
 
@@ -33,6 +30,7 @@ async function getNextId() {
       spreadsheetId: "1oplYJrkOrmwWcMc2q25WB5bq2M_1ShoAHzFZwAC65Ws",
       range: "Sheet1!A:A", // Fetch entire column A (IDs)
     });
+    console.log("hell");
 
     const values = res.data.values || [];
     return values.length + 1; // Next available row (assuming row 1 is a header)
@@ -48,6 +46,7 @@ async function writeData( name, email,phone,college,event) {
   try {
     const nextId = await getNextId();
     if (nextId === null) {
+      console.log("gi");
       throw new Error("Failed to retrieve next ID.");
     }
 
@@ -69,10 +68,14 @@ async function writeData( name, email,phone,college,event) {
     return { status: "error", message: "Failed to write data", error: error.message };
   }
 }
+app.get("/", (req,res) => {
+  res.json({ message: "hello from backend" });
+})
 
 // POST route to handle form submission from frontend
 app.post("/register", async (req, res) => {
-  const { name, email,phone,college,event } = req.body;
+  const { name, email, phone, college, event } = req.body;
+  console.log(req.body);
 
   if (!name || !event || !phone) {    
     return res.status(400).json({ status: "error", message: "All fields are required!" });
