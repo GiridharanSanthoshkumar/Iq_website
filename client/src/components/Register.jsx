@@ -17,12 +17,15 @@ const Register = () => {
     const isMobile = screenWidth < 768;
     const backend = "https://iq-website-zeta.vercel.app";
 
+
+    //const [rerender, setRerender] = useState("no");
     // State for form fields
    const formData = useRef({
         name: "",
         email: "",
         phone: "",
-        college: "",
+       college: "",
+        transactionId:"",
         events:[]
     });
     const [message, setMessage] = useState("");
@@ -35,7 +38,7 @@ const Register = () => {
     ];
      const eventsList2 = ["Treasure Hunt","Type Racer","Music Mania","Tech Charades"];
     const handleChange = (e) => {
-        formData.current[e.target.name] += e.target.value;
+        formData.current[e.target.name] = e.target.value;
 
     };
     const handleCheckboxChange = (e) => {
@@ -52,6 +55,10 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+          
+        console.log(formData.current);
+
+
       
       
         try {
@@ -64,19 +71,20 @@ const Register = () => {
             const result = await response.json();
             if (result.status === "success") {
                 setMessage(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation your registration.`);
-                window.alert(message);
-                formData.name = "";
-                formData.email = "";
-                formData.phone = "";
-                formData.college = "";
-                formData.event =[];
+                window.alert(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation your registration.`);
+               window.location.reload();
             } else {
+                window.alert(`Error: ${result.message}`);
+                 window.location.reload();
                 setMessage(`Error: ${result.message}`);
             }
         } catch (error) {
+            window.alert(`Error: ${error}`);
+             window.location.reload();
             console.error("Error submitting form:", error);
             setMessage("An error occurred while submitting the form.");
         }
+        
     };
 
     return (
@@ -287,10 +295,10 @@ const Register = () => {
                             <TextField 
                                 fullWidth 
                                 className="input-field"
-                                label="College" 
-                                name="college" 
+                                label="UPI Transaction ID" 
+                                name="transactionId" 
                                 variant="outlined" 
-                                value={formData.college} 
+                                value={formData.transactionId} 
                                 onChange={handleChange} 
                                 InputProps={{ style: { color: "white" } }}
                                 sx={{ 

@@ -43,7 +43,7 @@ async function getNextId() {
 
 
 // Function to write data to Google Sheets
-async function writeData(name, email, phone, college, event) {
+async function writeData(name, email, phone, college,transactionId,event) {
   try {
     const nextId = await getNextId();
     if (nextId === null) {
@@ -54,10 +54,10 @@ async function writeData(name, email, phone, college, event) {
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: "1CJkUv8y5bqY_gYdmD99mv73E4sfrmsTfdKzDEJk_axc",
-      range: "Sheet1!A:F", // Append to the sheet without specifying a row
+      range: "Sheet1!A:G", // Append to the sheet without specifying a row
       valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS", // Ensures new rows are added
-      requestBody: { values: [[uniqueId, name, email, phone, college, event]] }, // ✅ Use function parameters
+      requestBody: { values: [[uniqueId, name, email, phone, college,transactionId,event]] }, // ✅ Use function parameters
     });
 
     console.log("Data written successfully! : ",uniqueId);
@@ -71,7 +71,7 @@ async function writeData(name, email, phone, college, event) {
 
 // POST route to handle form submission from frontend
 app.post("/register", async (req, res) => {
-  const { name, email,phone,college,events } = req.body;
+  const { name, email,phone,college,transactionId,events } = req.body;
 
   if (!name || !events || !phone) {    
     return res.status(400).json({ status: "error", message: "All fields are required!" });
@@ -89,7 +89,7 @@ app.post("/register", async (req, res) => {
    
   }
 
-  const response = await writeData( name, email,phone,college,event);
+  const response = await writeData( name, email,phone,college,transactionId,event);
   res.json(response);
 });
 
