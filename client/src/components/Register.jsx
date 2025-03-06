@@ -16,8 +16,8 @@ const Register = () => {
 
     const screenWidth = window.innerWidth;
     const isMobile = screenWidth < 768;
-    const backend = "https://iq-website-zeta.vercel.app";
-
+   const backend = "https://iq-website-zeta.vercel.app";
+    //const backend = "http://localhost:5000";
 
     //const [rerender, setRerender] = useState("no");
     // State for form fields

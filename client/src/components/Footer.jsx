@@ -19,10 +19,10 @@ const Footer = () => {
           <div className="link-group">
             <h3>CONTACT</h3>
             <ul>
-              <li><a href="#">Abhiraj [General secretary]</a></li>
-              <li><a href="#">+91 79047 77069</a></li>
-              <li><a href="#">Cathlyn [Joint secretary]</a></li>
-              <li><a href="#">+91 98401 11601</a></li>
+              <li><a>Abhiraj [General secretary]</a></li>
+              <li><a>+91 79047 77069</a></li>
+              <li><a>Cathlyn [Joint secretary]</a></li>
+              <li><a>+91 98401 11601</a></li>
             </ul>
           </div>
 
@@ -42,7 +42,7 @@ const Footer = () => {
             <h3>SOCIALS</h3>
             <div className="social-icons">
           
-             <a href="tomail:gctcsea@gct.ac.in" target="blank" className="text-gray-400 hover:text-white">
+             <a href="mailto:gctcsea@gct.ac.in" target="blank" className="text-gray-400 hover:text-white">
                 <i class="fa-solid fa-envelope" style={{ color: "#ffffff" }}></i>
               </a>
              <a href="https://www.instagram.com/gctcsea" target="blank"  className="text-gray-400 hover:text-white">
