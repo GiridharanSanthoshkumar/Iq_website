@@ -58,33 +58,92 @@ const Register = () => {
         e.preventDefault();
           
         console.log(formData.current);
+        // Simple email validation regex
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phonePattern = /^[0-9]{10,}$/; 
+
+    // Extract form data
+    const { email, name, phone, college, transactionId, events } = formData.current;
+
+    // Validation checks
+    if (!email) {
+        setMessage("Enter the Email");
+        window.alert("Enter the Email");
+         window.location.reload();
+        return;
+    } else if (!emailPattern.test(email)) {
+        setMessage("Enter a valid Email address");
+        window.alert("Enter a valid Email address");
+         window.location.reload();
+        return;
+    }
+
+    if (!name) {
+        setMessage("Enter the Name");
+        window.alert("Enter the Name");
+         window.location.reload();
+        return;
+    }
+
+    if (!phone) {
+        setMessage("Enter the Phone number");
+        window.alert("Enter the Phone number");
+         window.location.reload();
+        return;
+    } else if (!phonePattern.test(phone)) {
+        setMessage("Enter a valid Phone number (only digits, at least 10)");
+        window.alert("Enter a valid Phone number (only digits, at least 10)");
+         window.location.reload();
+        return;
+    }
+    if (!college) {
+        setMessage("Enter the College name");
+        window.alert("Enter the College name");
+         window.location.reload();
+        return;
+    }
+
+    if (!transactionId) {
+        setMessage("Enter the Transaction ID");
+        window.alert("Enter the Transaction ID");
+         window.location.reload();
+        return;
+    }
+
+    if (!events || events.length === 0) {
+        setMessage("Select at least one event");
+        window.alert("Select at least one event");
+         window.location.reload();
+        return;
+    }
 
 
       
       
-        try {
-            const response = await fetch(backend+"/register", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData.current),
-            });
+            try {
+                const response = await fetch(backend + "/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData.current),
+                });
 
-            const result = await response.json();
-            if (result.status === "success") {
-                setMessage(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation your registration.`);
-                window.alert(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation your registration.`);
-               window.location.reload();
-            } else {
-                window.alert(`Error: ${result.message}`);
-                 window.location.reload();
-                setMessage(`Error: ${result.message}`);
+                const result = await response.json();
+                if (result.status === "success") {
+                    setMessage(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation of your registration.`);
+                    window.alert(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation of your registration.`);
+                    window.location.reload();
+                } else {
+                    window.alert(`Error: ${result.message}`);
+                    window.location.reload();
+                    setMessage(`Error: ${result.message}`);
+                }
+            } catch (error) {
+                window.alert(`Error: ${error}`);
+                window.location.reload();
+                console.error("Error submitting form:", error);
+                setMessage("An error occurred while submitting the form.");
             }
-        } catch (error) {
-            window.alert(`Error: ${error}`);
-             window.location.reload();
-            console.error("Error submitting form:", error);
-            setMessage("An error occurred while submitting the form.");
-        }
+        
         
     };
 
