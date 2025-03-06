@@ -86,12 +86,14 @@ const About = () => {
                 </p>
                 <motion.button 
                     className="register-button" 
-                    onClick={() => navigate("/register")}
+                    
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: contentInView ? 1 : 0.8, opacity: contentInView ? 1 : 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    REGISTER
+                    <a href="/register" style={{textDecoration:"none",color:"black"}}>
+                        REGISTER
+                        </a>
                 </motion.button>
             </motion.div>
 

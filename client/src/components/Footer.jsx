@@ -19,10 +19,10 @@ const Footer = () => {
           <div className="link-group">
             <h3>CONTACT</h3>
             <ul>
-              <li><a href="#">Abhiraj[General secretary]</a></li>
-              <li><a href="#">+91 89401 234567</a></li>
-              <li><a href="#">Cathlyn[Joint secretary]</a></li>
-              <li><a href="#">+91 89401 234567</a></li>
+              <li><a href="#">Abhiraj [General secretary]</a></li>
+              <li><a href="#">+91 79047 77069</a></li>
+              <li><a href="#">Cathlyn [Joint secretary]</a></li>
+              <li><a href="#">+91 98401 11601</a></li>
             </ul>
           </div>
 
@@ -30,10 +30,10 @@ const Footer = () => {
           <div className="link-group">
             <h3>WEB TEAM</h3>
             <ul>
-              <li><a href="#">Giridharan S [Web Dev]</a></li>
-              <li><a href="#">BarathKumar [Web Dev]</a></li>
-              <li><a href="#">Sandhiya [UI Designer]</a></li>
-              <li><a href="#">Preethi [UI Designer]</a></li>
+              <li><a >Giridharan S [Web Dev]</a></li>
+              <li><a >BarathKumar [Web Dev]</a></li>
+              <li><a >Sandhiya [UI Designer]</a></li>
+              <li><a >Preethi [UI Designer]</a></li>
             </ul>
           </div>
 
@@ -41,17 +41,15 @@ const Footer = () => {
           <div className="link-group">
             <h3>SOCIALS</h3>
             <div className="social-icons">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-facebook-f"></i>
+          
+             <a href="tomail:gctcsea@gct.ac.in" target="blank" className="text-gray-400 hover:text-white">
+                <i class="fa-solid fa-envelope" style={{ color: "#ffffff" }}></i>
               </a>
-             <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-twitter"></i>
+             <a href="https://www.instagram.com/gctcsea" target="blank"  className="text-gray-400 hover:text-white">
+                <i className="fab fa-instagram" style={{ color: "#ffffff" }}></i>
               </a>
-             <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-instagram"></i>
-              </a>
-               <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-linkedin-in"></i>
+               <a href="https://www.linkedin.com/company/cseagct/" target="blank"  className="text-gray-400 hover:text-white">
+                <i class="fa-brands fa-linkedin" style={{ color: "#ffffff" }}></i>
               </a>
             </div>
           </div>

@@ -10,12 +10,28 @@
     overflow-y: auto; /* Allows scrolling */
     padding-top: 5%; /* Gives space at the top */
       font-family: 'Orbitron', sans-serif;
+      padding-bottom: 5%;
 }
 .input-field{
    font-family: 'Orbitron', sans-serif;
+
 }
-
-
+.payment-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+.transId{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.payment-img{
+    width:30%;
+}
 
 
 

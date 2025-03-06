@@ -2,6 +2,7 @@ import { useState, useMemo,useCallback,useRef } from "react";
 import { motion } from "framer-motion";
 import { TextField, Button, Grid, Paper, Typography, Stack, Select, MenuItem } from "@mui/material";
 import "./Register.css";
+import Upiscanner from "./assets/payment-scanner.jpeg";
 
 
 const Register = () => {
@@ -29,14 +30,14 @@ const Register = () => {
         events:[]
     });
     const [message, setMessage] = useState("");
-    const eventsList1 = [ "Reverse Coding",
-  "Debugging",
-  "Blind Coding",
-  "Paper Presentation",
-  "Web Design",
-        "Technical Quiz",
+    const eventsList1 = [ "Code Unravel",
+  "Byte the Bug",
+  "Shadow code",
+  "Presentix",
+  "WebXpert",
+        "Techtonic Quiz"
     ];
-     const eventsList2 = ["Treasure Hunt","Type Racer","Music Mania","Tech Charades"];
+     const eventsList2 = ["Hunt 'n' Seek","Type Racer","Music Mania","Techmime"];
     const handleChange = (e) => {
         formData.current[e.target.name] = e.target.value;
 
@@ -291,6 +292,12 @@ const Register = () => {
                             </fieldset>
                             </div>
 
+                        <div className="payment-div">
+                            <img src={Upiscanner} alt="payment scanner" class="payment-img"></img>
+                            <p style={{color:"white",textAlign:"center"}}>UPI_ID:srikanthbsa4@oksbi</p>
+                        </div>
+
+                        <div className="transId">
                         <Grid item xs={12} sm={5}>
                             <TextField 
                                 fullWidth 
@@ -312,10 +319,13 @@ const Register = () => {
                                     } 
                                 }}
                             />
-                        </Grid>
+                            </Grid>
+                            </div>
+                           
 
                         
                     </Grid>
+
 
                     {/* Submit Button */}
                     <Stack direction="row" justifyContent="center" sx={{ marginTop: 3 }}>

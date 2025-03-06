@@ -7,14 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const events = [
-  "Reverse Coding",
-  "Debugging",
-  "Blind Coding",
-  "Paper Presentation",
-  "Web Design",
-  "Technical Quiz",
-];
+const events = [ "CODE UNRAVEL",
+  "BYTE THE BUG",
+  "SHADOW CODE",
+  "PRESENTIX",
+  "WEBXPERT",
+      "TECHTONIC QUIZ",
+    ];
 
 const eventColors = [
   "linear-gradient(135deg, #000000, #063748f5, #08090b, #000000)",  // Deep Space Blue

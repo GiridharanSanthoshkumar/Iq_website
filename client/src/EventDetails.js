@@ -1,6 +1,6 @@
 const EventDetails = [
   {
-    name: "Reverse Coding",
+    name: "CODE UNRAVEL",
     description:
       "Think you can crack the code just by looking at the output? In this challenge, you’ll be given a set of test cases, and your mission is to figure out the logic and write the code that produces the same results. It’s all about problem-solving, logical thinking, and a bit of reverse engineering!",
     rules: [
@@ -13,7 +13,7 @@ const EventDetails = [
     contact: ["Preethi G - 93453 28048","Balaji R A - 82482 55395"]
   },
   {
-    name: "Debugging",
+    name: "BYTE THE BUG",
     description:
       "Got an eye for spotting mistakes? In this challenge, you’ll be handed a buggy piece of code—full of logical, syntax, or runtime errors. Your mission? Find and fix as many errors as possible before time runs out!",
     rules: [
@@ -24,7 +24,7 @@ const EventDetails = [
     contact: ["Madhumitha B J - 70109 22948","Balaji R A - 82482 55395"]
   },
   {
-    name: "Blind Coding",
+    name: "SHADOW CODE",
     description:
       "Ready to put your coding skills to the ultimate test? Here, you'll have to write a program without seeing your screen! No real-time feedback, no syntax highlighting—just you, your keyboard, and your memory. Once time’s up, your code will be revealed and tested to see if it runs as expected.",
     rules: [
@@ -36,7 +36,7 @@ const EventDetails = [
     contact: ["Thoufeeq A - 63801 05590","Sakthivel K - 73975 38521"]
   },
   {
-    name: "Web Design",
+    name: "WebXpert",
     description:
       "Got a knack for aesthetics and a passion for coding? This is your chance to craft a stunning web page or website from scratch! It's not just about aesthetics—judging will focus on design principles, user experience, and functionality. Show off your web development skills and create something visually stunning and technically sound!",
     rules: [
@@ -48,7 +48,7 @@ const EventDetails = [
     contact: ["Venkatesaperumal R - 73057 23573","Balaji R A - 82482 55395"]
   },
   {
-  name: "Technical Quiz",
+  name: "TechTonic Quiz",
   description: "Think you have what it takes to crack the toughest tech questions? This quiz will put your knowledge to the test with questions spanning programming, networking, emerging technologies, and more. Stay sharp and be quick—because speed and accuracy matter!",
   rules: [
     "Individual event.",
@@ -58,7 +58,7 @@ const EventDetails = [
   contact: ["Divaagar R B - 94898 29816","Balaji R A - 82482 55395"]
 },
   {
-    name: "Paper Presentation",
+    name: "Presentix",
     description:
       "Have a groundbreaking idea or an innovative project? This is your platform to showcase it! Participants will present a research paper or technical project, followed by a quick Q&A session with the judges. This event isn’t just about facts—it’s about how well you communicate complex ideas with clarity and impact.",
     rules: [
@@ -69,7 +69,7 @@ const EventDetails = [
     contact: ["Deepika V - 76959 55644","Jerin Richie D - 94866 93425"]
   },
   {
-    name: "Treasure Hunt",
+    name: "Hunt 'n' Seek",
     description:
       "Get ready for an adrenaline-packed adventure! Teams will navigate through a series of clues, crack puzzles, and complete challenges to uncover the hidden treasure. This event is all about strategy, teamwork, and quick thinking—only the sharpest minds will make it to the finish line!",
     rules: [
@@ -103,7 +103,7 @@ const EventDetails = [
     contact: ["Sandhiya S - 78128 68428","Vinothini S - 78260 26437"],
   },
   {
-    name: "Tech Charades",
+    name: "Tech Mime",
     description:
       "A high-energy game of charades—tech edition! Participants will act out technology-related terms, gadgets, or concepts while their team races against the clock to guess correctly. No words, no sounds—just gestures, creativity, and a lot of laughter!",
     rules: [
