@@ -23,6 +23,8 @@ const Footer = () => {
               <li><a>+91 79047 77069</a></li>
               <li><a>Cathlyn [Joint secretary]</a></li>
               <li><a>+91 98401 11601</a></li>
+              <li><a>Balaji [Overall Queries]</a></li>
+              <li><a>+91 82482 55395</a></li>
             </ul>
           </div>
 

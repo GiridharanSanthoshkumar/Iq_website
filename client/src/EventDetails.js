@@ -10,7 +10,8 @@ const EventDetails = [
       "Plagiarism or copying code from external sources will lead to disqualification.",
       "The jury's decision is final.",
     ],
-    contact: ["Preethi G - 93453 28048","Balaji R A - 82482 55395"]
+    contact: ["Preethi G - 93453 28048","Balaji R A - 82482 55395"],
+    prize:"₹1200"
   },
   {
     name: "BYTE THE BUG",
@@ -21,7 +22,8 @@ const EventDetails = [
       "Participants are ranked based on the number of bugs fixed and the accuracy of their solutions.",
       "The jury’s decision is final.",
     ],
-    contact: ["Madhumitha B J - 70109 22948","Balaji R A - 82482 55395"]
+    contact: ["Madhumitha B J - 70109 22948","Balaji R A - 82482 55395"],
+    prize:"₹1200"
   },
   {
     name: "SHADOW CODE",
@@ -33,7 +35,8 @@ const EventDetails = [
       "Participants must submit their code within the given time.",
       "The jury’s decision is final.",
     ],
-    contact: ["Thoufeeq A - 63801 05590","Sakthivel K - 73975 38521"]
+    contact: ["Thoufeeq A - 63801 05590","Sakthivel K - 73975 38521"],
+    prize:"₹1200"
   },
   {
     name: "WebXpert",
@@ -45,17 +48,19 @@ const EventDetails = [
       "Plagiarism or copying code from external sources will lead to disqualification.",
       "The jury’s decision is final.",
     ],
-    contact: ["Venkatesaperumal R - 73057 23573","Balaji R A - 82482 55395"]
+    contact: ["Venkatesaperumal R - 73057 23573","Balaji R A - 82482 55395"],
+    prize:"₹1200"
   },
   {
   name: "TechTonic Quiz",
   description: "Think you have what it takes to crack the toughest tech questions? This quiz will put your knowledge to the test with questions spanning programming, networking, emerging technologies, and more. Stay sharp and be quick—because speed and accuracy matter!",
   rules: [
     "Individual event.",
-    "The quiz consists of multiple-choice and rapid-fire questions in a single round.",
+    "The quiz consists of multiple-choice and questions in a single round.",
     "The jury’s decision is final."
   ],
-  contact: ["Divaagar R B - 94898 29816","Balaji R A - 82482 55395"]
+  contact: ["Divaagar R B - 94898 29816","Balaji R A - 82482 55395"],
+  prize:"₹1200"
 },
   {
     name: "Presentix",
@@ -66,18 +71,20 @@ const EventDetails = [
       "Evaluated based on research quality, presentation clarity, and innovation.",
       "The jury’s decision is final.",
     ],
-    contact: ["Deepika V - 76959 55644","Jerin Richie D - 94866 93425"]
+    contact: ["Deepika V - 76959 55644","Jerin Richie D - 94866 93425"],
+    prize:"₹1400"
   },
   {
     name: "Hunt 'n' Seek",
     description:
       "Get ready for an adrenaline-packed adventure! Teams will navigate through a series of clues, crack puzzles, and complete challenges to uncover the hidden treasure. This event is all about strategy, teamwork, and quick thinking—only the sharpest minds will make it to the finish line!",
     rules: [
-      "Team-based event.",
+      "Maximum of 4 members per team.",
       "The first team to find the treasure wins.",
       "The jury’s decision is final.",
     ],
     contact: ["Muhamad Haneef J - 73394 80186","Balaji R A - 82482 55395"],
+    prize:"₹1600"
   },
   {
     name: "Type Racer",
@@ -90,6 +97,7 @@ const EventDetails = [
       "The jury’s decision is final.",
     ],
     contact: ["Leelavathi S - 82201 81957","Balaji R A - 82482 55395"],
+    prize:"₹1200"
   },
   {
     name: "Music Mania",
@@ -101,6 +109,7 @@ const EventDetails = [
       "The jury’s decision is final.",
     ],
     contact: ["Sandhiya S - 78128 68428","Vinothini S - 78260 26437"],
+    prize:"₹1400"
   },
   {
     name: "Tech Mime",
@@ -112,6 +121,7 @@ const EventDetails = [
       "The jury’s decision is final.",
     ],
     contact: ["Yogeshwari L - 79049 75049","Balaji R A - 82482 55395"],
+    prize:"₹1400"
   },
 ];
 
