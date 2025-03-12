@@ -216,7 +216,7 @@ const Register = () => {
                                     input: { color: "white" ,fontFamily: "Orbitron"}, 
                                     label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
-                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
+                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 13px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
                                         "&.Mui-focused fieldset": { borderColor: "cyan" } 
                                     } 
@@ -238,7 +238,7 @@ const Register = () => {
                                     input: { color: "white" ,fontFamily: "Orbitron"}, 
                                     label: { color: "white",fontFamily: "Orbitron" }, 
                                     "& .MuiOutlinedInput-root": { 
-                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
+                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 13px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
                                         "&.Mui-focused fieldset": { borderColor: "cyan" } 
                                     } 
@@ -260,7 +260,7 @@ const Register = () => {
                                    input: { color: "white" ,fontFamily: "Orbitron"}, 
                                     label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
-                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
+                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 13px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
                                         "&.Mui-focused fieldset": { borderColor: "cyan" } 
                                     } 
@@ -282,7 +282,7 @@ const Register = () => {
                                    input: { color: "white" ,fontFamily: "Orbitron"}, 
                                     label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
-                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
+                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 13px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
                                         "&.Mui-focused fieldset": { borderColor: "cyan" } 
                                     } 
@@ -290,40 +290,42 @@ const Register = () => {
                             />
                         </Grid>
 
-                        {/* Event Selection Dropdown
+
+
                         <Grid item xs={12} sm={5}>
-                            <Select
-                                fullWidth
-                                name="event"
-                                value={formData.event}
-                                onChange={handleChange}
-                                displayEmpty
-                                sx={{
-                                    color: "white",
-                                    border: "2px solid white",
-                                    boxShadow: "0 0 10px cyan",
-                                    borderRadius: "20px",
-                                    "& .MuiSvgIcon-root": { color: "white" },
-                                    "& .MuiOutlinedInput-root": {
-                                        "& fieldset": { border: "2px solid white" },
-                                        "&:hover fieldset": { borderColor: "cyan" },
-                                        "&.Mui-focused fieldset": { borderColor: "cyan" }
-                                    }
-                                }}
-                            >
-                                <MenuItem value="" disabled>Select an Event</MenuItem>
-                                <MenuItem value="Coding Contest">Coding Contest</MenuItem>
-                                <MenuItem value="Hackathon">Hackathon</MenuItem>
-                                <MenuItem value="Tech Quiz">Tech Quiz</MenuItem>
-                                <MenuItem value="AI Workshop">AI Workshop</MenuItem>
-                                <MenuItem value="Robotics Competition">Robotics Competition</MenuItem>
-                                <MenuItem value="Blockchain Seminar">Blockchain Seminar</MenuItem>
-                            </Select>
-                        </Grid>
-                         */}
-                        <div class="check-box-flexbox">
+                        <fieldset class="check-boxx1">
+                            <legend>Select Tech Events</legend>
+                            {eventsList1.map((event, index) => (
+                            <label key={index}>
+                             <input
+                            type="checkbox"
+                            value={event}
+                            onChange={handleCheckboxChange}
+                             />
+                                {event}
+                            </label>
+                        ))}
+                        </fieldset>
+                        </Grid> 
+
+                        <Grid item xs={12} sm={5}>
+                        <fieldset class="check-boxx2">
+                        <legend>Select Non-Tech Events</legend>
+                        {eventsList2.map((event, index) => (
+                        <label key={index}>
+                        <input
+                            type="checkbox"
+                            value={event}
+                            onChange={handleCheckboxChange}
+                        />
+                        {event}
+                    </label>
+                ))}
+                            </fieldset>
+                        </Grid> 
+                        {/* <div class="check-box-flexbox">
                        <fieldset class="check-boxx1">
-                <legend>Select Tech Events</legend>
+                            <legend>Select Tech Events</legend>
                 {eventsList1.map((event, index) => (
                     <label key={index}>
                         <input
@@ -349,14 +351,20 @@ const Register = () => {
                     </label>
                 ))}
                             </fieldset>
-                            </div>
+                            </div> */}
 
-                        <div className="payment-div">
+                        {/* <div className="payment-div">
                             <img src={Upiscanner} alt="payment scanner" class="payment-img"></img>
                             <p style={{color:"white",textAlign:"center"}}>UPI_ID:srikanthbsa4@oksbi</p>
-                        </div>
+                        </div> */}
+                        <Grid direction="column" sx={{ width:isMobile ? "80%" : "75%", marginTop:isMobile?"5%":"3%", bgcolor: "transparent", zIndex: 10 }}>
+                            <Grid item xs={12} sm={12} sx={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+                                <img src={Upiscanner} alt="payment scanner" class="payment-img"></img>
+                                <p style={{color:"white",textAlign:"center",textShadow: "0 0 10px cyan"}}>UPI_ID:srikanthbsa4@oksbi</p>
+                                <p style={{color:"white",textAlign:"center",textShadow: "0 0 10px cyan"}}>Register Amount : ₹250 per head</p>
+                            </Grid>
+                        </Grid>
 
-                        <div className="transId">
                         <Grid item xs={12} sm={5}>
                             <TextField 
                                 fullWidth 
@@ -372,14 +380,13 @@ const Register = () => {
                                    input: { color: "white" ,fontFamily: "Orbitron"}, 
                                     label: { color: "white",fontFamily: "Orbitron" },
                                     "& .MuiOutlinedInput-root": { 
-                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 10px cyan", borderRadius: "20px" }, 
+                                        "& fieldset": { border: "2px solid white", boxShadow: "0 0 13px cyan", borderRadius: "20px" }, 
                                         "&:hover fieldset": { borderColor: "cyan" }, 
                                         "&.Mui-focused fieldset": { borderColor: "cyan" } 
                                     } 
                                 }}
                             />
                             </Grid>
-                            </div>
                            
 
                         
@@ -398,7 +405,7 @@ const Register = () => {
                                 padding: "10px 20px",
                                 fontSize: "1.2rem",
                                 borderRadius: "20px",
-                                boxShadow: "0 0 10px cyan",
+                                boxShadow: "0 0 13px cyan",
                                 transition: "0.3s ease-in-out",
                                 "&:hover": { background: "cyan", color: "black", boxShadow: "0 0 20px cyan" },
                             }}

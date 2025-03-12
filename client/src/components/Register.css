@@ -31,6 +31,9 @@
 }
 .payment-img{
     width:30%;
+    border: 2px solid white;
+    box-shadow: 0 0 20px cyan;
+    border-radius:15px;
 }
 
 
@@ -63,24 +66,19 @@
     display: flex;
    width: 92%;
     margin-left: 3%;
-   
    column-gap: 12%;
-    
-    
 }
 
 
 .check-boxx1{
     color:white;
-        width: 39%;
-        border-radius:20px ;
-    
-    
+    width: 95%;
+    border-radius:20px ;
 }
 .check-boxx2{
      color:white;
       height: 100%;
-        width: 40%;
+        width: 95%;
           border-radius:20px ;
      
       
@@ -93,6 +91,14 @@ display: block;
     .check-boxx2>label{
 display: block;
 
+    }
+    
+    
+    fieldset
+    {
+        border: 2px solid white;
+        box-shadow: 0 0 13px cyan;
+        border-radius: 20px;
     }
 
 /* Responsive */
@@ -110,21 +116,13 @@ display: block;
     display: flex;
     flex-direction: column;
    width: 100%;
-    margin-left: 3%;
-
-   
-   
-    
-    
+ 
 }
 .check-boxx1{
-    width: 80%;
-    margin-left:5%;
+    width: 90%;
 }
 .check-boxx2{
-    margin-top: 10%;
-    width: 80%;
-    margin-left:5%;
+    width: 90%;
 }
 .payment-img{
     width:70%;
