@@ -46,8 +46,25 @@ const EventPage = ({ event }) => {
           <h2>Contact</h2>
           {event.contact.map((c) => <p style={{ display: "block" }} >{c}</p>)}
         </div>
+        <div className="contact-info" style={{display:"flex",alignItems:"center"}}>
+          <h2>Prize Pool : </h2>
+          <p style={{ display: "block" ,marginLeft:"2%"}}>{event.prize}</p>
+        </div>
+
+        <div className="contact-info" style={{display:"flex",alignItems:"center",marginTop:"-2%"}}>
+          <h2>Rulebook : </h2>
+          <a href="https://drive.google.com/file/d/1fbfbgcN3QLTzS0J-rkf4SAaVTawl_WoZ/view?usp=drivesdk" style={{
+            padding: "10px 20px",
+            color: "cyan",
+            fontSize: "16px",
+            fontWeight: "bold",
+            textDecoration: "none",
+            transition: "background 0.3s ease-in-out, transform 0.2s",
+        
+          }}>Link to Rulebook</a>
+        </div>
       </div>
-    </div>
+    </div> 
   );
 };
 

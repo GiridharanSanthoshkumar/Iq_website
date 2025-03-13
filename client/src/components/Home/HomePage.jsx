@@ -72,7 +72,7 @@ const HomePage = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
         >
-          Explore the infinite.
+          Code the Cosmos
         </motion.p>
        
               <motion.div
