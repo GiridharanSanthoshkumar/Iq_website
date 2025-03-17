@@ -67,7 +67,7 @@ const EventDetails = [
     description:
       "Have a groundbreaking idea or an innovative project? This is your platform to showcase it! Participants will present a research paper or technical project, followed by a quick Q&A session with the judges. This event isn’t just about facts—it’s about how well you communicate complex ideas with clarity and impact.",
     rules: [
-      "Individual or team event.",
+      "Individual or team event (max 2 per team).",
       "Evaluated based on research quality, presentation clarity, and innovation.",
       "The jury’s decision is final.",
     ],
@@ -104,7 +104,7 @@ const EventDetails = [
     description:
       "Are you the ultimate music buff? Test your knowledge as you listen to short snippets of songs and race against the clock to identify the song title, artist, and movie. Whether you're a chart-topping expert or just love a good tune, this challenge will keep you on your toes!",
     rules: [
-      "Team event.",
+      "Team event (max 2 per team).",
       "A single round with timed responses.",
       "The jury’s decision is final.",
     ],
@@ -116,7 +116,7 @@ const EventDetails = [
     description:
       "A high-energy game of charades—tech edition! Participants will act out technology-related terms, gadgets, or concepts while their team races against the clock to guess correctly. No words, no sounds—just gestures, creativity, and a lot of laughter!",
     rules: [
-      "Team-based event.",
+      "Team-based event (max 2 per team).",
       "The team with the most correct guesses within the time limit wins.",
       "The jury’s decision is final.",
     ],
