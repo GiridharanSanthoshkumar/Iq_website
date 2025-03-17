@@ -30,6 +30,7 @@ const Register = () => {
         events:[]
     });
     const [message, setMessage] = useState("");
+    const [isLoading, setisLoading] = useState(false);
     const eventsList1 = [ "Code Unravel",
   "Byte the Bug",
   "Shadow code",
@@ -119,7 +120,7 @@ const Register = () => {
 
 
       
-      
+        setisLoading(true);
             try {
                 const response = await fetch(backend + "/register", {
                     method: "POST",
@@ -128,16 +129,23 @@ const Register = () => {
                 });
 
                 const result = await response.json();
+                 setisLoading(false);
                 if (result.status === "success") {
+
                     setMessage(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation of your registration.`);
+                   
                     window.alert(`Registration successful! Your ID: ${result.id}.After verification of the payment details,You will get the e-mail about confirmation of your registration.`);
+                    
                     window.location.reload();
                 } else {
+                    
                     window.alert(`Error: ${result.message}`);
                     window.location.reload();
                     setMessage(`Error: ${result.message}`);
                 }
             } catch (error) {
+                setisLoading(false);
+
                 window.alert(`Error: ${error}`);
                 window.location.reload();
                 console.error("Error submitting form:", error);
@@ -148,8 +156,35 @@ const Register = () => {
     };
 
     return (
+        
         <div className="register-container">
             {/* Starry Background */}
+    <div 
+    class="loading" 
+    style={{
+        display: isLoading ? "flex" : "none",  // Use flex for centering
+        position: "fixed",                     // Fixed to cover the whole page
+        top: 0,
+        left: 0,
+        width: "100vw",                       // Full viewport width
+        height: "100vh",                      // Full viewport height
+        backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark semi-transparent background
+        backdropFilter: "blur(5px)",          // Blurs background content
+        alignItems: "center",                 // Center content vertically
+        justifyContent: "center",             // Center content horizontally
+        zIndex: 9999                          // Ensures it's above all other content
+    }}
+>
+    <div style={{
+        backgroundColor: "#fff",             // Loading box background
+        padding: "20px 40px",
+        borderRadius: "8px",
+        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+        fontWeight: "bold"
+    }}>
+        Loading...
+    </div>
+</div>
             <div className="stars">
                 {stars.map((star, index) => (
                     <motion.div

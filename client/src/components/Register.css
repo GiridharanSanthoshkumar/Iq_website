@@ -11,6 +11,7 @@
     padding-top: 5%; /* Gives space at the top */
       font-family: 'Orbitron', sans-serif;
       padding-bottom: 5%;
+      position: relative;
 }
 .input-field{
    font-family: 'Orbitron', sans-serif;
