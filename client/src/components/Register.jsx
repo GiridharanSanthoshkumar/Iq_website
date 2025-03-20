@@ -232,6 +232,9 @@ const Register = () => {
                     <Typography className="registerTitle input-field" variant={isMobile ? "h5" : "h4"} sx={{ textAlign: "center", color: "white", textShadow: "0 0 5px cyan", marginBottom: 3 , fontFamily: "Orbitron" }}>
                         Mission to IQ 🚀
                     </Typography>
+                    <Typography className="registerTitle input-field" variant={isMobile ? "h5" : "h4"} sx={{ textAlign: "center", color: "white", textShadow: "0 0 5px cyan", marginBottom: 3 , fontFamily: "Orbitron" }}>
+                        On-Spot Registrations will open by tomorrow Morning 8 AM!
+                    </Typography>
 
                     {/* Form Fields */}
                     <Grid container spacing={2} columnGap={10} rowGap={isMobile ? 2 : 8} style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: "2%" }}>

@@ -4,7 +4,7 @@ import "./SpaceTimer.css"; // Add styles
 
 const SpaceTimer = () => {
   // Set your event date
-  const targetDate = new Date("2025-03-21T00:00:00").getTime();
+  const targetDate = new Date("2025-03-20T20:00:00").getTime();
 
   // Timer state
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
