@@ -14,10 +14,10 @@ const SpaceTimer = () => {
     const difference = targetDate - now;
 
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-      seconds: Math.floor((difference % (1000 * 60)) / 1000),
+      days: Math.floor(0),
+      hours: Math.floor(0),
+      minutes: Math.floor(0),
+      seconds: Math.floor(0),
     };
   }
 
@@ -37,7 +37,7 @@ const SpaceTimer = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="timer-title">COUNTDOWN TO INFOQUEST'25</h2>
+        <h2 className="timer-title">ONLINE REGISTRATIONS ARE CLOSED,SO ON-SPOT REGISTRATIONS WILL BE OPENED AT MARCH 21 8:30 AM </h2>
         <div className="timer">
           <motion.div 
             className="time-box"
